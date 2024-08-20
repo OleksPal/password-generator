@@ -1,6 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -23,13 +24,16 @@ namespace PasswordGeneratorApp
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, 
+                Primary.Blue900, Primary.Blue400, Accent.Red200, TextShade.WHITE);
 
             trackBar1.Minimum = 8;
             trackBar1.Maximum = 128;
-            textBox1.Text = GenerateStaticPassword();            
+            textBox1.Text = GenerateStaticPassword();
         }
+
+        private void StealFocus() => label1.Focus();
 
         private string GenerateStaticPassword()
         {
@@ -70,6 +74,8 @@ namespace PasswordGeneratorApp
 
             label2.Text = "Password Length: " + trackBar1.Value;
             textBox1.Text = GenerateStaticPassword();
+
+            StealFocus();
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -89,7 +95,7 @@ namespace PasswordGeneratorApp
 
         private void textBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            if(firstClick)
+            if (firstClick)
                 textBox2.Text = String.Empty;
             firstClick = false;
         }
