@@ -30,257 +30,256 @@ namespace PasswordGeneratorApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.SuspendLayout();
+            tabPage2 = new System.Windows.Forms.TabPage();
+            button4 = new System.Windows.Forms.Button();
+            button3 = new System.Windows.Forms.Button();
+            textBox3 = new System.Windows.Forms.TextBox();
+            textBox2 = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            tabPage1 = new System.Windows.Forms.TabPage();
+            button2 = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
+            trackBar1 = new System.Windows.Forms.TrackBar();
+            label1 = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            checkBox2 = new System.Windows.Forms.CheckBox();
+            checkBox1 = new System.Windows.Forms.CheckBox();
+            textBox1 = new System.Windows.Forms.TextBox();
+            tabControl1 = new System.Windows.Forms.TabControl();
+            tabPage2.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+            tabControl1.SuspendLayout();
+            SuspendLayout();
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(677, 270);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Memorable";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Controls.Add(button4);
+            tabPage2.Controls.Add(button3);
+            tabPage2.Controls.Add(textBox3);
+            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Location = new System.Drawing.Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            tabPage2.Size = new System.Drawing.Size(680, 244);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Memorable";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.BackgroundImage = global::PasswordGeneratorApp.Properties.Resources.Copy;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(374, 194);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 34);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "   Copy";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.BackgroundImage = Properties.Resources.Copy;
+            button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button4.Location = new System.Drawing.Point(374, 194);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(104, 34);
+            button4.TabIndex = 17;
+            button4.Text = "   Copy";
+            button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::PasswordGeneratorApp.Properties.Resources.Button_Refresh_icon;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(166, 194);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 34);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Refresh";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            button3.BackColor = System.Drawing.Color.Transparent;
+            button3.BackgroundImage = Properties.Resources.Button_Refresh_icon;
+            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            button3.Location = new System.Drawing.Point(166, 194);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(104, 34);
+            button3.TabIndex = 16;
+            button3.Text = "Refresh";
+            button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(6, 126);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(665, 34);
-            this.textBox3.TabIndex = 15;
-            this.textBox3.Text = " ";
-            this.textBox3.WordWrap = false;
+            textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            textBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            textBox3.Location = new System.Drawing.Point(6, 126);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new System.Drawing.Size(665, 34);
+            textBox3.TabIndex = 15;
+            textBox3.Text = " ";
+            textBox3.WordWrap = false;
             // 
             // textBox2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(6, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(665, 34);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.Text = "Enter your code phrase...";
-            this.textBox2.WordWrap = false;
-            this.textBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox2_MouseClick);
+            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            textBox2.Location = new System.Drawing.Point(6, 67);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new System.Drawing.Size(665, 34);
+            textBox2.TabIndex = 14;
+            textBox2.Text = "Enter your code phrase...";
+            textBox2.WordWrap = false;
+            textBox2.MouseClick += textBox2_MouseClick;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(0, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(360, 46);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Your Secure Password";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.ForeColor = System.Drawing.Color.Red;
+            label3.Location = new System.Drawing.Point(0, 3);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(360, 46);
+            label3.TabIndex = 13;
+            label3.Text = "Your Secure Password";
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.trackBar1);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox1);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(677, 270);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Non-Memorable";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Controls.Add(button2);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(trackBar1);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(checkBox2);
+            tabPage1.Controls.Add(checkBox1);
+            tabPage1.Controls.Add(textBox1);
+            tabPage1.Location = new System.Drawing.Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            tabPage1.Size = new System.Drawing.Size(680, 244);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Non-Memorable";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::PasswordGeneratorApp.Properties.Resources.Copy;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(637, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 34);
-            this.button2.TabIndex = 16;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            button2.BackColor = System.Drawing.Color.White;
+            button2.BackgroundImage = Properties.Resources.Copy;
+            button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button2.Location = new System.Drawing.Point(637, 53);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(34, 34);
+            button2.TabIndex = 16;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += Button2_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(9, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 33);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Password Length:  8";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.Red;
+            label2.Location = new System.Drawing.Point(9, 152);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(238, 33);
+            label2.TabIndex = 15;
+            label2.Text = "Password Length:  8";
             // 
             // trackBar1
             // 
-            this.trackBar1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackBar1.Location = new System.Drawing.Point(-4, 93);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(678, 56);
-            this.trackBar1.TabIndex = 14;
-            this.trackBar1.Value = 8;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            trackBar1.BackColor = System.Drawing.SystemColors.Window;
+            trackBar1.Location = new System.Drawing.Point(-4, 93);
+            trackBar1.Name = "trackBar1";
+            trackBar1.Size = new System.Drawing.Size(678, 56);
+            trackBar1.TabIndex = 14;
+            trackBar1.Value = 8;
+            trackBar1.Scroll += trackBar1_Scroll;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 46);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Your Secure Password";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.Red;
+            label1.Location = new System.Drawing.Point(3, 3);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(360, 46);
+            label1.TabIndex = 12;
+            label1.Text = "Your Secure Password";
             // 
             // button1
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::PasswordGeneratorApp.Properties.Resources.Button_Refresh_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(597, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            button1.BackColor = System.Drawing.Color.White;
+            button1.BackgroundImage = Properties.Resources.Button_Refresh_icon;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Location = new System.Drawing.Point(597, 53);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(34, 34);
+            button1.TabIndex = 11;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // checkBox2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(9, 220);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(231, 32);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "Allow special symbols";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.AutoSize = true;
+            checkBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            checkBox2.Location = new System.Drawing.Point(9, 220);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new System.Drawing.Size(231, 32);
+            checkBox2.TabIndex = 10;
+            checkBox2.Text = "Allow special symbols";
+            checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(9, 188);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(167, 32);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Allow numbers";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            checkBox1.Location = new System.Drawing.Point(9, 188);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new System.Drawing.Size(167, 32);
+            checkBox1.TabIndex = 9;
+            checkBox1.Text = "Allow numbers";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(3, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(588, 34);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.WordWrap = false;
+            textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            textBox1.Location = new System.Drawing.Point(3, 53);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new System.Drawing.Size(588, 34);
+            textBox1.TabIndex = 8;
+            textBox1.WordWrap = false;
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(2, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(685, 303);
-            this.tabControl1.TabIndex = 0;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new System.Drawing.Point(6, 67);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(688, 277);
+            tabControl1.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(682, 303);
-            this.Controls.Add(this.tabControl1);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.Text = "PasswordGenerator";
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            BackColor = System.Drawing.SystemColors.ActiveCaption;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            ClientSize = new System.Drawing.Size(700, 360);
+            Controls.Add(tabControl1);
+            ForeColor = System.Drawing.SystemColors.ControlText;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form1";
+            Text = "PasswordGenerator";
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
+            tabControl1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
