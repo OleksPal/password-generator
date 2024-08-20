@@ -3,7 +3,7 @@ using MaterialSkin.Controls;
 
 namespace PasswordGeneratorApp
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,372 +31,377 @@ namespace PasswordGeneratorApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            tabPage2 = new System.Windows.Forms.TabPage();
-            materialLabel1 = new MaterialLabel();
-            textBox2 = new MaterialTextBox();
-            textBox3 = new MaterialTextBox();
-            button4 = new MaterialButton();
-            button3 = new MaterialButton();
-            label3 = new MaterialLabel();
-            tabPage1 = new System.Windows.Forms.TabPage();
-            label1 = new MaterialLabel();
-            button2 = new MaterialButton();
-            label2 = new MaterialLabel();
-            trackBar1 = new System.Windows.Forms.TrackBar();
-            button1 = new MaterialButton();
-            checkBox2 = new MaterialCheckbox();
-            checkBox1 = new MaterialCheckbox();
-            textBox1 = new MaterialTextBox();
-            tabControl1 = new MaterialTabControl();
-            materialTabSelector1 = new MaterialTabSelector();
-            tabPage2.SuspendLayout();
-            tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
-            tabControl1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            memorableTabPage = new System.Windows.Forms.TabPage();
+            securePasswordLabel = new MaterialLabel();
+            userKeywordsTextBox = new MaterialTextBox();
+            memorablePasswordTextBox = new MaterialTextBox();
+            copyMemorablePasswordButton = new MaterialButton();
+            generateMemorablePasswordButton = new MaterialButton();
+            yourKeywordsLabel = new MaterialLabel();
+            nonMemorableTabPage = new System.Windows.Forms.TabPage();
+            nonMemorablePageTitle = new MaterialLabel();
+            copyNonMemorableButton = new MaterialButton();
+            passwordLengthLabel = new MaterialLabel();
+            passwordSizeTrackBar = new System.Windows.Forms.TrackBar();
+            refreshButton = new MaterialButton();
+            allowSpecialSymbolsCheckBox = new MaterialCheckbox();
+            allowNumbersCheckBox = new MaterialCheckbox();
+            nonMemorableTextBox = new MaterialTextBox();
+            tabControl = new MaterialTabControl();
+            tabSelector = new MaterialTabSelector();
+            memorableTabPage.SuspendLayout();
+            nonMemorableTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)passwordSizeTrackBar).BeginInit();
+            tabControl.SuspendLayout();
             SuspendLayout();
             // 
-            // tabPage2
+            // memorableTabPage
             // 
-            tabPage2.BackColor = System.Drawing.Color.White;
-            tabPage2.Controls.Add(materialLabel1);
-            tabPage2.Controls.Add(textBox2);
-            tabPage2.Controls.Add(textBox3);
-            tabPage2.Controls.Add(button4);
-            tabPage2.Controls.Add(button3);
-            tabPage2.Controls.Add(label3);
-            tabPage2.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            tabPage2.Location = new System.Drawing.Point(4, 37);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            tabPage2.Size = new System.Drawing.Size(683, 226);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Memorable";
+            memorableTabPage.BackColor = System.Drawing.Color.White;
+            memorableTabPage.Controls.Add(securePasswordLabel);
+            memorableTabPage.Controls.Add(userKeywordsTextBox);
+            memorableTabPage.Controls.Add(memorablePasswordTextBox);
+            memorableTabPage.Controls.Add(copyMemorablePasswordButton);
+            memorableTabPage.Controls.Add(generateMemorablePasswordButton);
+            memorableTabPage.Controls.Add(yourKeywordsLabel);
+            memorableTabPage.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            memorableTabPage.Location = new System.Drawing.Point(4, 37);
+            memorableTabPage.Name = "memorableTabPage";
+            memorableTabPage.Padding = new System.Windows.Forms.Padding(3);
+            memorableTabPage.Size = new System.Drawing.Size(683, 226);
+            memorableTabPage.TabIndex = 1;
+            memorableTabPage.Text = "Memorable";
             // 
-            // materialLabel1
+            // securePasswordLabel
             // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            materialLabel1.FontType = MaterialSkinManager.fontType.H5;
-            materialLabel1.ForeColor = System.Drawing.Color.Red;
-            materialLabel1.Location = new System.Drawing.Point(10, 106);
-            materialLabel1.MouseState = MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new System.Drawing.Size(242, 29);
-            materialLabel1.TabIndex = 20;
-            materialLabel1.Text = "Your Secure Password";
+            securePasswordLabel.AutoSize = true;
+            securePasswordLabel.Depth = 0;
+            securePasswordLabel.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            securePasswordLabel.FontType = MaterialSkinManager.fontType.H5;
+            securePasswordLabel.ForeColor = System.Drawing.Color.Red;
+            securePasswordLabel.Location = new System.Drawing.Point(10, 106);
+            securePasswordLabel.MouseState = MouseState.HOVER;
+            securePasswordLabel.Name = "securePasswordLabel";
+            securePasswordLabel.Size = new System.Drawing.Size(242, 29);
+            securePasswordLabel.TabIndex = 0;
+            securePasswordLabel.Text = "Your Secure Password";
             // 
-            // textBox2
+            // userKeywordsTextBox
             // 
-            textBox2.AnimateReadOnly = false;
-            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox2.Depth = 0;
-            textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            textBox2.LeadingIcon = null;
-            textBox2.Location = new System.Drawing.Point(10, 35);
-            textBox2.MaxLength = 50;
-            textBox2.MouseState = MouseState.OUT;
-            textBox2.Multiline = false;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(668, 50);
-            textBox2.TabIndex = 19;
-            textBox2.Text = "Keyword";
-            textBox2.TrailingIcon = null;
+            userKeywordsTextBox.AnimateReadOnly = false;
+            userKeywordsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            userKeywordsTextBox.Depth = 0;
+            userKeywordsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            userKeywordsTextBox.LeadingIcon = null;
+            userKeywordsTextBox.Location = new System.Drawing.Point(10, 35);
+            userKeywordsTextBox.MaxLength = 50;
+            userKeywordsTextBox.MouseState = MouseState.OUT;
+            userKeywordsTextBox.Multiline = false;
+            userKeywordsTextBox.Name = "userKeywordsTextBox";
+            userKeywordsTextBox.Size = new System.Drawing.Size(668, 50);
+            userKeywordsTextBox.TabIndex = 1;
+            userKeywordsTextBox.Text = "Keyword";
+            userKeywordsTextBox.TrailingIcon = null;
             // 
-            // textBox3
+            // memorablePasswordTextBox
             // 
-            textBox3.AnimateReadOnly = false;
-            textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox3.Depth = 0;
-            textBox3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            textBox3.LeadingIcon = null;
-            textBox3.Location = new System.Drawing.Point(10, 147);
-            textBox3.MaxLength = 50;
-            textBox3.MouseState = MouseState.OUT;
-            textBox3.Multiline = false;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(668, 50);
-            textBox3.TabIndex = 18;
-            textBox3.Text = "";
-            textBox3.TrailingIcon = null;
+            memorablePasswordTextBox.AnimateReadOnly = false;
+            memorablePasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            memorablePasswordTextBox.Depth = 0;
+            memorablePasswordTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            memorablePasswordTextBox.LeadingIcon = null;
+            memorablePasswordTextBox.Location = new System.Drawing.Point(10, 147);
+            memorablePasswordTextBox.MaxLength = 50;
+            memorablePasswordTextBox.MouseState = MouseState.OUT;
+            memorablePasswordTextBox.Multiline = false;
+            memorablePasswordTextBox.Name = "memorablePasswordTextBox";
+            memorablePasswordTextBox.ReadOnly = true;
+            memorablePasswordTextBox.Size = new System.Drawing.Size(668, 50);
+            memorablePasswordTextBox.TabIndex = 2;
+            memorablePasswordTextBox.Text = "";
+            memorablePasswordTextBox.TrailingIcon = null;
             // 
-            // button4
+            // copyMemorablePasswordButton
             // 
-            button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            button4.Density = MaterialButton.MaterialButtonDensity.Default;
-            button4.Depth = 0;
-            button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button4.HighEmphasis = true;
-            button4.Icon = null;
-            button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button4.Location = new System.Drawing.Point(400, 206);
-            button4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            button4.MaximumSize = new System.Drawing.Size(100, 50);
-            button4.MinimumSize = new System.Drawing.Size(100, 50);
-            button4.MouseState = MouseState.HOVER;
-            button4.Name = "button4";
-            button4.NoAccentTextColor = System.Drawing.Color.Empty;
-            button4.Size = new System.Drawing.Size(100, 50);
-            button4.TabIndex = 17;
-            button4.Text = "Copy";
-            button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button4.Type = MaterialButton.MaterialButtonType.Contained;
-            button4.UseAccentColor = false;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            copyMemorablePasswordButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            copyMemorablePasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            copyMemorablePasswordButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            copyMemorablePasswordButton.Depth = 0;
+            copyMemorablePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            copyMemorablePasswordButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            copyMemorablePasswordButton.HighEmphasis = true;
+            copyMemorablePasswordButton.Icon = null;
+            copyMemorablePasswordButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            copyMemorablePasswordButton.Location = new System.Drawing.Point(400, 206);
+            copyMemorablePasswordButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            copyMemorablePasswordButton.MaximumSize = new System.Drawing.Size(100, 50);
+            copyMemorablePasswordButton.MinimumSize = new System.Drawing.Size(100, 50);
+            copyMemorablePasswordButton.MouseState = MouseState.HOVER;
+            copyMemorablePasswordButton.Name = "copyMemorablePasswordButton";
+            copyMemorablePasswordButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            copyMemorablePasswordButton.Size = new System.Drawing.Size(100, 50);
+            copyMemorablePasswordButton.TabIndex = 3;
+            copyMemorablePasswordButton.Text = "Copy";
+            copyMemorablePasswordButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            copyMemorablePasswordButton.Type = MaterialButton.MaterialButtonType.Contained;
+            copyMemorablePasswordButton.UseAccentColor = false;
+            copyMemorablePasswordButton.UseVisualStyleBackColor = true;
+            copyMemorablePasswordButton.Click += CopyMemorablePasswordButtonClick;
             // 
-            // button3
+            // generateMemorablePasswordButton
             // 
-            button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            button3.BackColor = System.Drawing.Color.Transparent;
-            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            button3.Density = MaterialButton.MaterialButtonDensity.Default;
-            button3.Depth = 0;
-            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button3.HighEmphasis = true;
-            button3.Icon = null;
-            button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            button3.Location = new System.Drawing.Point(195, 206);
-            button3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            button3.MaximumSize = new System.Drawing.Size(100, 50);
-            button3.MinimumSize = new System.Drawing.Size(100, 50);
-            button3.MouseState = MouseState.HOVER;
-            button3.Name = "button3";
-            button3.NoAccentTextColor = System.Drawing.Color.Empty;
-            button3.Size = new System.Drawing.Size(100, 50);
-            button3.TabIndex = 16;
-            button3.Text = "Generate";
-            button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            button3.Type = MaterialButton.MaterialButtonType.Contained;
-            button3.UseAccentColor = false;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            generateMemorablePasswordButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            generateMemorablePasswordButton.BackColor = System.Drawing.Color.Transparent;
+            generateMemorablePasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            generateMemorablePasswordButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            generateMemorablePasswordButton.Depth = 0;
+            generateMemorablePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            generateMemorablePasswordButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            generateMemorablePasswordButton.HighEmphasis = true;
+            generateMemorablePasswordButton.Icon = null;
+            generateMemorablePasswordButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            generateMemorablePasswordButton.Location = new System.Drawing.Point(195, 206);
+            generateMemorablePasswordButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            generateMemorablePasswordButton.MaximumSize = new System.Drawing.Size(100, 50);
+            generateMemorablePasswordButton.MinimumSize = new System.Drawing.Size(100, 50);
+            generateMemorablePasswordButton.MouseState = MouseState.HOVER;
+            generateMemorablePasswordButton.Name = "generateMemorablePasswordButton";
+            generateMemorablePasswordButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            generateMemorablePasswordButton.Size = new System.Drawing.Size(100, 50);
+            generateMemorablePasswordButton.TabIndex = 4;
+            generateMemorablePasswordButton.Text = "Generate";
+            generateMemorablePasswordButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            generateMemorablePasswordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            generateMemorablePasswordButton.Type = MaterialButton.MaterialButtonType.Contained;
+            generateMemorablePasswordButton.UseAccentColor = false;
+            generateMemorablePasswordButton.UseVisualStyleBackColor = false;
+            generateMemorablePasswordButton.Click += GenerateMemorablePasswordButtonClick;
             // 
-            // label3
+            // yourKeywordsLabel
             // 
-            label3.AutoSize = true;
-            label3.Depth = 0;
-            label3.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label3.FontType = MaterialSkinManager.fontType.H5;
-            label3.ForeColor = System.Drawing.Color.Red;
-            label3.Location = new System.Drawing.Point(10, 3);
-            label3.MouseState = MouseState.HOVER;
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(161, 29);
-            label3.TabIndex = 13;
-            label3.Text = "Your Keywords";
+            yourKeywordsLabel.AutoSize = true;
+            yourKeywordsLabel.Depth = 0;
+            yourKeywordsLabel.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            yourKeywordsLabel.FontType = MaterialSkinManager.fontType.H5;
+            yourKeywordsLabel.ForeColor = System.Drawing.Color.Red;
+            yourKeywordsLabel.Location = new System.Drawing.Point(10, 3);
+            yourKeywordsLabel.MouseState = MouseState.HOVER;
+            yourKeywordsLabel.Name = "yourKeywordsLabel";
+            yourKeywordsLabel.Size = new System.Drawing.Size(161, 29);
+            yourKeywordsLabel.TabIndex = 5;
+            yourKeywordsLabel.Text = "Your Keywords";
             // 
-            // tabPage1
+            // nonMemorableTabPage
             // 
-            tabPage1.BackColor = System.Drawing.Color.White;
-            tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(trackBar1);
-            tabPage1.Controls.Add(button1);
-            tabPage1.Controls.Add(checkBox2);
-            tabPage1.Controls.Add(checkBox1);
-            tabPage1.Controls.Add(textBox1);
-            tabPage1.Location = new System.Drawing.Point(4, 37);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            tabPage1.Size = new System.Drawing.Size(683, 226);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Non-Memorable";
+            nonMemorableTabPage.BackColor = System.Drawing.Color.White;
+            nonMemorableTabPage.Controls.Add(nonMemorablePageTitle);
+            nonMemorableTabPage.Controls.Add(copyNonMemorableButton);
+            nonMemorableTabPage.Controls.Add(passwordLengthLabel);
+            nonMemorableTabPage.Controls.Add(passwordSizeTrackBar);
+            nonMemorableTabPage.Controls.Add(refreshButton);
+            nonMemorableTabPage.Controls.Add(allowSpecialSymbolsCheckBox);
+            nonMemorableTabPage.Controls.Add(allowNumbersCheckBox);
+            nonMemorableTabPage.Controls.Add(nonMemorableTextBox);
+            nonMemorableTabPage.Location = new System.Drawing.Point(4, 37);
+            nonMemorableTabPage.Name = "nonMemorableTabPage";
+            nonMemorableTabPage.Padding = new System.Windows.Forms.Padding(3);
+            nonMemorableTabPage.Size = new System.Drawing.Size(683, 226);
+            nonMemorableTabPage.TabIndex = 0;
+            nonMemorableTabPage.Text = "Non-Memorable";
             // 
-            // label1
+            // nonMemorablePageTitle
             // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.IndianRed;
-            label1.Depth = 0;
-            label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label1.FontType = MaterialSkinManager.fontType.H5;
-            label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(10, 3);
-            label1.MouseState = MouseState.HOVER;
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(242, 29);
-            label1.TabIndex = 12;
-            label1.Text = "Your Secure Password";
+            nonMemorablePageTitle.AutoSize = true;
+            nonMemorablePageTitle.BackColor = System.Drawing.Color.IndianRed;
+            nonMemorablePageTitle.Depth = 0;
+            nonMemorablePageTitle.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            nonMemorablePageTitle.FontType = MaterialSkinManager.fontType.H5;
+            nonMemorablePageTitle.ForeColor = System.Drawing.Color.Black;
+            nonMemorablePageTitle.Location = new System.Drawing.Point(10, 3);
+            nonMemorablePageTitle.MouseState = MouseState.HOVER;
+            nonMemorablePageTitle.Name = "nonMemorablePageTitle";
+            nonMemorablePageTitle.Size = new System.Drawing.Size(242, 29);
+            nonMemorablePageTitle.TabIndex = 0;
+            nonMemorablePageTitle.Text = "Your Secure Password";
             // 
-            // button2
+            // copyNonMemorableButton
             // 
-            button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            button2.BackColor = System.Drawing.Color.White;
-            button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            button2.Density = MaterialButton.MaterialButtonDensity.Default;
-            button2.Depth = 0;
-            button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button2.HighEmphasis = true;
-            button2.Icon = null;
-            button2.Location = new System.Drawing.Point(596, 35);
-            button2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            button2.MaximumSize = new System.Drawing.Size(80, 50);
-            button2.MinimumSize = new System.Drawing.Size(80, 50);
-            button2.MouseState = MouseState.HOVER;
-            button2.Name = "button2";
-            button2.NoAccentTextColor = System.Drawing.Color.Empty;
-            button2.Size = new System.Drawing.Size(80, 50);
-            button2.TabIndex = 16;
-            button2.Text = "Copy";
-            button2.Type = MaterialButton.MaterialButtonType.Contained;
-            button2.UseAccentColor = false;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += Button2_Click;
+            copyNonMemorableButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            copyNonMemorableButton.BackColor = System.Drawing.Color.White;
+            copyNonMemorableButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            copyNonMemorableButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            copyNonMemorableButton.Depth = 0;
+            copyNonMemorableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            copyNonMemorableButton.HighEmphasis = true;
+            copyNonMemorableButton.Icon = null;
+            copyNonMemorableButton.Location = new System.Drawing.Point(596, 35);
+            copyNonMemorableButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            copyNonMemorableButton.MaximumSize = new System.Drawing.Size(80, 50);
+            copyNonMemorableButton.MinimumSize = new System.Drawing.Size(80, 50);
+            copyNonMemorableButton.MouseState = MouseState.HOVER;
+            copyNonMemorableButton.Name = "copyNonMemorableButton";
+            copyNonMemorableButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            copyNonMemorableButton.Size = new System.Drawing.Size(80, 50);
+            copyNonMemorableButton.TabIndex = 1;
+            copyNonMemorableButton.Text = "Copy";
+            copyNonMemorableButton.Type = MaterialButton.MaterialButtonType.Contained;
+            copyNonMemorableButton.UseAccentColor = false;
+            copyNonMemorableButton.UseVisualStyleBackColor = false;
+            copyNonMemorableButton.Click += CopyNonMemorableButtonClick;
             // 
-            // label2
+            // passwordLengthLabel
             // 
-            label2.AutoSize = true;
-            label2.Depth = 0;
-            label2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            label2.FontType = MaterialSkinManager.fontType.H6;
-            label2.ForeColor = System.Drawing.Color.Red;
-            label2.Location = new System.Drawing.Point(10, 130);
-            label2.MouseState = MouseState.HOVER;
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(182, 24);
-            label2.TabIndex = 15;
-            label2.Text = "Password Length:  8";
+            passwordLengthLabel.AutoSize = true;
+            passwordLengthLabel.Depth = 0;
+            passwordLengthLabel.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            passwordLengthLabel.FontType = MaterialSkinManager.fontType.H6;
+            passwordLengthLabel.ForeColor = System.Drawing.Color.Red;
+            passwordLengthLabel.Location = new System.Drawing.Point(10, 130);
+            passwordLengthLabel.MouseState = MouseState.HOVER;
+            passwordLengthLabel.Name = "passwordLengthLabel";
+            passwordLengthLabel.Size = new System.Drawing.Size(182, 24);
+            passwordLengthLabel.TabIndex = 2;
+            passwordLengthLabel.Text = "Password Length:  8";
             // 
-            // trackBar1
+            // passwordSizeTrackBar
             // 
-            trackBar1.BackColor = System.Drawing.SystemColors.Window;
-            trackBar1.Location = new System.Drawing.Point(10, 89);
-            trackBar1.MaximumSize = new System.Drawing.Size(1000, 50);
-            trackBar1.MinimumSize = new System.Drawing.Size(100, 50);
-            trackBar1.Name = "trackBar1";
-            trackBar1.Size = new System.Drawing.Size(665, 50);
-            trackBar1.TabIndex = 0;
-            trackBar1.TabStop = false;
-            trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
-            trackBar1.Scroll += trackBar1_Scroll;
+            passwordSizeTrackBar.BackColor = System.Drawing.SystemColors.Window;
+            passwordSizeTrackBar.Location = new System.Drawing.Point(10, 89);
+            passwordSizeTrackBar.Maximum = 128;
+            passwordSizeTrackBar.MaximumSize = new System.Drawing.Size(1000, 50);
+            passwordSizeTrackBar.Minimum = 8;
+            passwordSizeTrackBar.MinimumSize = new System.Drawing.Size(100, 50);
+            passwordSizeTrackBar.Name = "passwordSizeTrackBar";
+            passwordSizeTrackBar.Size = new System.Drawing.Size(665, 50);
+            passwordSizeTrackBar.TabIndex = 3;
+            passwordSizeTrackBar.TabStop = false;
+            passwordSizeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            passwordSizeTrackBar.Value = 8;
+            passwordSizeTrackBar.Scroll += PasswordSizeTrackBarScroll;
+            passwordSizeTrackBar.Enter += PasswordSizeTrackBarEnter;
             // 
-            // button1
+            // refreshButton
             // 
-            button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            button1.BackColor = System.Drawing.Color.White;
-            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            button1.Density = MaterialButton.MaterialButtonDensity.Default;
-            button1.Depth = 0;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.HighEmphasis = true;
-            button1.Icon = null;
-            button1.Location = new System.Drawing.Point(511, 35);
-            button1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            button1.MaximumSize = new System.Drawing.Size(80, 50);
-            button1.MinimumSize = new System.Drawing.Size(80, 50);
-            button1.MouseState = MouseState.HOVER;
-            button1.Name = "button1";
-            button1.NoAccentTextColor = System.Drawing.Color.Empty;
-            button1.Size = new System.Drawing.Size(80, 50);
-            button1.TabIndex = 11;
-            button1.Text = "Refresh";
-            button1.Type = MaterialButton.MaterialButtonType.Contained;
-            button1.UseAccentColor = false;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            refreshButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            refreshButton.BackColor = System.Drawing.Color.White;
+            refreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            refreshButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            refreshButton.Depth = 0;
+            refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            refreshButton.HighEmphasis = true;
+            refreshButton.Icon = null;
+            refreshButton.Location = new System.Drawing.Point(511, 35);
+            refreshButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            refreshButton.MaximumSize = new System.Drawing.Size(80, 50);
+            refreshButton.MinimumSize = new System.Drawing.Size(80, 50);
+            refreshButton.MouseState = MouseState.HOVER;
+            refreshButton.Name = "refreshButton";
+            refreshButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            refreshButton.Size = new System.Drawing.Size(80, 50);
+            refreshButton.TabIndex = 4;
+            refreshButton.Text = "Refresh";
+            refreshButton.Type = MaterialButton.MaterialButtonType.Contained;
+            refreshButton.UseAccentColor = false;
+            refreshButton.UseVisualStyleBackColor = false;
+            refreshButton.Click += RefreshButtonClick;
             // 
-            // checkBox2
+            // allowSpecialSymbolsCheckBox
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Depth = 0;
-            checkBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            checkBox2.Location = new System.Drawing.Point(3, 205);
-            checkBox2.Margin = new System.Windows.Forms.Padding(0);
-            checkBox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            checkBox2.MouseState = MouseState.HOVER;
-            checkBox2.Name = "checkBox2";
-            checkBox2.ReadOnly = false;
-            checkBox2.Ripple = true;
-            checkBox2.Size = new System.Drawing.Size(192, 37);
-            checkBox2.TabIndex = 10;
-            checkBox2.Text = "Allow special symbols";
-            checkBox2.UseVisualStyleBackColor = true;
+            allowSpecialSymbolsCheckBox.AutoSize = true;
+            allowSpecialSymbolsCheckBox.Depth = 0;
+            allowSpecialSymbolsCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            allowSpecialSymbolsCheckBox.Location = new System.Drawing.Point(3, 205);
+            allowSpecialSymbolsCheckBox.Margin = new System.Windows.Forms.Padding(0);
+            allowSpecialSymbolsCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            allowSpecialSymbolsCheckBox.MouseState = MouseState.HOVER;
+            allowSpecialSymbolsCheckBox.Name = "allowSpecialSymbolsCheckBox";
+            allowSpecialSymbolsCheckBox.ReadOnly = false;
+            allowSpecialSymbolsCheckBox.Ripple = true;
+            allowSpecialSymbolsCheckBox.Size = new System.Drawing.Size(192, 37);
+            allowSpecialSymbolsCheckBox.TabIndex = 5;
+            allowSpecialSymbolsCheckBox.Text = "Allow special symbols";
+            allowSpecialSymbolsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // allowNumbersCheckBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Depth = 0;
-            checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            checkBox1.Location = new System.Drawing.Point(3, 168);
-            checkBox1.Margin = new System.Windows.Forms.Padding(0);
-            checkBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            checkBox1.MouseState = MouseState.HOVER;
-            checkBox1.Name = "checkBox1";
-            checkBox1.ReadOnly = false;
-            checkBox1.Ripple = true;
-            checkBox1.Size = new System.Drawing.Size(140, 37);
-            checkBox1.TabIndex = 9;
-            checkBox1.Text = "Allow numbers";
-            checkBox1.UseVisualStyleBackColor = true;
+            allowNumbersCheckBox.AutoSize = true;
+            allowNumbersCheckBox.Depth = 0;
+            allowNumbersCheckBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            allowNumbersCheckBox.Location = new System.Drawing.Point(3, 168);
+            allowNumbersCheckBox.Margin = new System.Windows.Forms.Padding(0);
+            allowNumbersCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            allowNumbersCheckBox.MouseState = MouseState.HOVER;
+            allowNumbersCheckBox.Name = "allowNumbersCheckBox";
+            allowNumbersCheckBox.ReadOnly = false;
+            allowNumbersCheckBox.Ripple = true;
+            allowNumbersCheckBox.Size = new System.Drawing.Size(140, 37);
+            allowNumbersCheckBox.TabIndex = 6;
+            allowNumbersCheckBox.Text = "Allow numbers";
+            allowNumbersCheckBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // nonMemorableTextBox
             // 
-            textBox1.AnimateReadOnly = false;
-            textBox1.BackColor = System.Drawing.SystemColors.Control;
-            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox1.Depth = 0;
-            textBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            textBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            textBox1.LeadingIcon = null;
-            textBox1.Location = new System.Drawing.Point(10, 35);
-            textBox1.MaximumSize = new System.Drawing.Size(1000, 50);
-            textBox1.MaxLength = 50;
-            textBox1.MinimumSize = new System.Drawing.Size(100, 50);
-            textBox1.MouseState = MouseState.OUT;
-            textBox1.Multiline = false;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new System.Drawing.Size(495, 50);
-            textBox1.TabIndex = 8;
-            textBox1.Text = "";
-            textBox1.TrailingIcon = null;
-            textBox1.WordWrap = false;
+            nonMemorableTextBox.AnimateReadOnly = false;
+            nonMemorableTextBox.BackColor = System.Drawing.SystemColors.Control;
+            nonMemorableTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            nonMemorableTextBox.Depth = 0;
+            nonMemorableTextBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            nonMemorableTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
+            nonMemorableTextBox.LeadingIcon = null;
+            nonMemorableTextBox.Location = new System.Drawing.Point(10, 35);
+            nonMemorableTextBox.MaximumSize = new System.Drawing.Size(1000, 50);
+            nonMemorableTextBox.MaxLength = 50;
+            nonMemorableTextBox.MinimumSize = new System.Drawing.Size(100, 50);
+            nonMemorableTextBox.MouseState = MouseState.OUT;
+            nonMemorableTextBox.Multiline = false;
+            nonMemorableTextBox.Name = "nonMemorableTextBox";
+            nonMemorableTextBox.ReadOnly = true;
+            nonMemorableTextBox.Size = new System.Drawing.Size(495, 50);
+            nonMemorableTextBox.TabIndex = 7;
+            nonMemorableTextBox.Text = "";
+            nonMemorableTextBox.TrailingIcon = null;
+            nonMemorableTextBox.WordWrap = false;
             // 
-            // tabControl1
+            // tabControl
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Depth = 0;
-            tabControl1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            tabControl1.Location = new System.Drawing.Point(6, 107);
-            tabControl1.MouseState = MouseState.HOVER;
-            tabControl1.Multiline = true;
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new System.Drawing.Size(691, 267);
-            tabControl1.TabIndex = 1;
+            tabControl.Controls.Add(nonMemorableTabPage);
+            tabControl.Controls.Add(memorableTabPage);
+            tabControl.Depth = 0;
+            tabControl.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            tabControl.Location = new System.Drawing.Point(6, 107);
+            tabControl.MouseState = MouseState.HOVER;
+            tabControl.Multiline = true;
+            tabControl.Name = "tabControl";
+            tabControl.SelectedIndex = 0;
+            tabControl.Size = new System.Drawing.Size(691, 267);
+            tabControl.TabIndex = 0;
             // 
-            // materialTabSelector1
+            // tabSelector
             // 
-            materialTabSelector1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            materialTabSelector1.BaseTabControl = tabControl1;
-            materialTabSelector1.CharacterCasing = MaterialTabSelector.CustomCharacterCasing.Proper;
-            materialTabSelector1.Depth = 0;
-            materialTabSelector1.Dock = System.Windows.Forms.DockStyle.Top;
-            materialTabSelector1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialTabSelector1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            materialTabSelector1.Location = new System.Drawing.Point(0, 64);
-            materialTabSelector1.Margin = new System.Windows.Forms.Padding(0);
-            materialTabSelector1.MouseState = MouseState.HOVER;
-            materialTabSelector1.Name = "materialTabSelector1";
-            materialTabSelector1.Size = new System.Drawing.Size(700, 37);
-            materialTabSelector1.TabIndex = 1;
-            materialTabSelector1.Text = "materialTabSelector1";
+            tabSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            tabSelector.BaseTabControl = tabControl;
+            tabSelector.CharacterCasing = MaterialTabSelector.CustomCharacterCasing.Proper;
+            tabSelector.Depth = 0;
+            tabSelector.Dock = System.Windows.Forms.DockStyle.Top;
+            tabSelector.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            tabSelector.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            tabSelector.Location = new System.Drawing.Point(0, 64);
+            tabSelector.Margin = new System.Windows.Forms.Padding(0);
+            tabSelector.MouseState = MouseState.HOVER;
+            tabSelector.Name = "tabSelector";
+            tabSelector.Size = new System.Drawing.Size(700, 37);
+            tabSelector.TabIndex = 0;
+            tabSelector.Text = "materialTabSelector1";
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             BackColor = System.Drawing.Color.AliceBlue;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             ClientSize = new System.Drawing.Size(700, 380);
-            Controls.Add(tabControl1);
-            Controls.Add(materialTabSelector1);
+            Controls.Add(tabControl);
+            Controls.Add(tabSelector);
             Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point);
             ForeColor = System.Drawing.SystemColors.ControlText;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -404,40 +409,40 @@ namespace PasswordGeneratorApp
             MaximizeBox = false;
             MaximumSize = new System.Drawing.Size(700, 380);
             MinimumSize = new System.Drawing.Size(700, 380);
-            Name = "Form1";
+            Name = "MainForm";
             Padding = new System.Windows.Forms.Padding(0, 64, 0, 3);
             Sizable = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "PasswordGenerator";
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
-            tabControl1.ResumeLayout(false);
+            memorableTabPage.ResumeLayout(false);
+            memorableTabPage.PerformLayout();
+            nonMemorableTabPage.ResumeLayout(false);
+            nonMemorableTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)passwordSizeTrackBar).EndInit();
+            tabControl.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage2;
-        private MaterialButton button4;
-        private MaterialButton button3;
-        private MaterialTextBox textBox3;
-        private System.Windows.Forms.TabPage tabPage1;
-        private MaterialButton button2; 
-        private System.Windows.Forms.TrackBar trackBar1; 
-        private MaterialLabel label1;
-        private MaterialButton button1;
-        private MaterialCheckbox checkBox2;
-        private MaterialCheckbox checkBox1;
-        private MaterialTextBox textBox1;
-        private MaterialTabControl tabControl1;
-        private MaterialLabel label3;
-        private MaterialLabel label2;
-        private MaterialTabSelector materialTabSelector1;
-        private MaterialTextBox textBox2;
-        private MaterialLabel materialLabel1;
+        private System.Windows.Forms.TabPage memorableTabPage;
+        private MaterialButton copyMemorablePasswordButton;
+        private MaterialButton generateMemorablePasswordButton;
+        private MaterialTextBox memorablePasswordTextBox;
+        private System.Windows.Forms.TabPage nonMemorableTabPage;
+        private MaterialButton copyNonMemorableButton; 
+        private System.Windows.Forms.TrackBar passwordSizeTrackBar; 
+        private MaterialLabel nonMemorablePageTitle;
+        private MaterialButton refreshButton;
+        private MaterialCheckbox allowSpecialSymbolsCheckBox;
+        private MaterialCheckbox allowNumbersCheckBox;
+        private MaterialTextBox nonMemorableTextBox;
+        private MaterialTabControl tabControl;
+        private MaterialLabel yourKeywordsLabel;
+        private MaterialLabel passwordLengthLabel;
+        private MaterialTabSelector tabSelector;
+        private MaterialTextBox userKeywordsTextBox;
+        private MaterialLabel securePasswordLabel;
     }
 }
 

@@ -6,10 +6,8 @@ using System.Windows.Forms;
 
 namespace PasswordGeneratorApp
 {
-    public partial class Form1 : MaterialForm
+    public partial class MainForm : MaterialForm
     {
-        bool firstClick = true;
-
         Random rand = new();
         string result = String.Empty;
         const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -17,99 +15,92 @@ namespace PasswordGeneratorApp
         const string specialSymbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
         string vocabulary = letters;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, 
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800,
                 Primary.Blue900, Primary.Blue400, Accent.Amber400, TextShade.WHITE);
 
-            trackBar1.Minimum = 8;
-            trackBar1.Maximum = 128;
-            textBox1.Text = GenerateStaticPassword();
+            nonMemorableTextBox.Text = GenerateStaticPassword();
         }
 
-        private void StealFocus() => label1.Focus();
+        private void StealFocus() => nonMemorablePageTitle.Focus();
 
         private string GenerateStaticPassword()
         {
             result = String.Empty;
 
-            if (checkBox1.Checked)
+            if (allowNumbersCheckBox.Checked)
                 vocabulary += numbers;
-            if (checkBox2.Checked)
+            if (allowSpecialSymbolsCheckBox.Checked)
                 vocabulary += specialSymbols;
 
-            for (int i = 0; i < trackBar1.Value; i++)
+            for (int i = 0; i < passwordSizeTrackBar.Value; i++)
                 result += vocabulary[rand.Next(vocabulary.Length)];
             return result;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RefreshButtonClick(object sender, EventArgs e)
         {
             vocabulary = letters;
 
-            if (checkBox1.Checked)
+            if (allowNumbersCheckBox.Checked)
                 vocabulary += numbers;
-            if (checkBox2.Checked)
+            if (allowSpecialSymbolsCheckBox.Checked)
                 vocabulary += specialSymbols;
 
-            for (int i = 0; i < trackBar1.Value; i++)
+            for (int i = 0; i < passwordSizeTrackBar.Value; i++)
                 result += vocabulary[rand.Next(vocabulary.Length)];
-            textBox1.Text = GenerateStaticPassword();
+            nonMemorableTextBox.Text = GenerateStaticPassword();
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void PasswordSizeTrackBarScroll(object sender, EventArgs e)
         {
             vocabulary = letters;
 
-            if (checkBox1.Checked)
+            if (allowNumbersCheckBox.Checked)
                 vocabulary += numbers;
-            if (checkBox2.Checked)
+            if (allowSpecialSymbolsCheckBox.Checked)
                 vocabulary += specialSymbols;
 
-            label2.Text = "Password Length: " + trackBar1.Value;
-            textBox1.Text = GenerateStaticPassword();
+            passwordLengthLabel.Text = "Password Length: " + passwordSizeTrackBar.Value;
+            nonMemorableTextBox.Text = GenerateStaticPassword();
 
             StealFocus();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void PasswordSizeTrackBarEnter(object sender, EventArgs e) => StealFocus();
+
+        private void CopyNonMemorableButtonClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(textBox1.Text);
+            Clipboard.SetText(nonMemorableTextBox.Text);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void GenerateMemorablePasswordButtonClick(object sender, EventArgs e)
         {
-            textBox3.Text = GetAltResult();
+            memorablePasswordTextBox.Text = GetAltResult();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void CopyMemorablePasswordButtonClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(textBox3.Text);
+            Clipboard.SetText(memorablePasswordTextBox.Text);
         }
 
-        private void textBox2_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (firstClick)
-                textBox2.Text = String.Empty;
-            firstClick = false;
-        }
-
-        static string GetAltString(Replacement iDependencies, char nextRandSymbol)
+        static string GetAltString(Replacement replacement, char nextRandSymbol)
         {
             Random rand = new();
-            for (int j = 0; j < iDependencies.Replacements.Length; j++)
+            for (int j = 0; j < replacement.Replacements.Length; j++)
             {
-                if (nextRandSymbol.ToString() == iDependencies.Replacements[j][0])
+                if (nextRandSymbol.ToString() == replacement.Replacements[j][0])
                 {
-                    if (iDependencies.Replacements[j].Length == 1)
-                        return iDependencies.Replacements[j][0];
-                    return iDependencies.Replacements
-                        [j][rand.Next(0, iDependencies.Replacements[j].Length)];
+                    if (replacement.Replacements[j].Length == 1)
+                        return replacement.Replacements[j][0];
+                    return replacement.Replacements
+                        [j][rand.Next(0, replacement.Replacements[j].Length)];
                 }
             }
 
@@ -118,7 +109,7 @@ namespace PasswordGeneratorApp
 
         private string GetAltResult()
         {
-            string passWord = textBox2.Text;
+            string passWord = userKeywordsTextBox.Text;
             passWord = String.Concat(passWord.Where(c => !Char.IsWhiteSpace(c)));
             string result2 = String.Empty;
 
