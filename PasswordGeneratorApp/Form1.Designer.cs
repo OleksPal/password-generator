@@ -228,7 +228,6 @@ namespace PasswordGeneratorApp
             // 
             button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             button2.BackColor = System.Drawing.Color.White;
-            button2.BackgroundImage = Properties.Resources.Copy;
             button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             button2.Density = MaterialButton.MaterialButtonDensity.Default;
             button2.Depth = 0;
@@ -281,14 +280,12 @@ namespace PasswordGeneratorApp
             // 
             button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             button1.BackColor = System.Drawing.Color.White;
-            button1.BackgroundImage = Properties.Resources.Button_Refresh_icon;
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             button1.Density = MaterialButton.MaterialButtonDensity.Default;
             button1.Depth = 0;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.HighEmphasis = true;
             button1.Icon = null;
-            button1.Image = Properties.Resources.Button_Refresh_icon;
             button1.Location = new System.Drawing.Point(511, 35);
             button1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             button1.MaximumSize = new System.Drawing.Size(80, 50);

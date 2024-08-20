@@ -1,7 +1,6 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -26,7 +25,7 @@ namespace PasswordGeneratorApp
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, 
-                Primary.Blue900, Primary.Blue400, Accent.Red200, TextShade.WHITE);
+                Primary.Blue900, Primary.Blue400, Accent.Amber400, TextShade.WHITE);
 
             trackBar1.Minimum = 8;
             trackBar1.Maximum = 128;
@@ -100,17 +99,17 @@ namespace PasswordGeneratorApp
             firstClick = false;
         }
 
-        static string GetAltString(IDependencies iDependencies, char nextRandSymbol)
+        static string GetAltString(Replacement iDependencies, char nextRandSymbol)
         {
             Random rand = new();
-            for (int j = 0; j < iDependencies.GetDependencies().Length; j++)
+            for (int j = 0; j < iDependencies.Replacements.Length; j++)
             {
-                if (nextRandSymbol.ToString() == iDependencies.GetDependencies()[j][0])
+                if (nextRandSymbol.ToString() == iDependencies.Replacements[j][0])
                 {
-                    if (iDependencies.GetDependencies()[j].Length == 1)
-                        return iDependencies.GetDependencies()[j][0];
-                    return iDependencies.GetDependencies()
-                        [j][rand.Next(1, iDependencies.GetDependencies()[j].Length)];
+                    if (iDependencies.Replacements[j].Length == 1)
+                        return iDependencies.Replacements[j][0];
+                    return iDependencies.Replacements
+                        [j][rand.Next(0, iDependencies.Replacements[j].Length)];
                 }
             }
 
@@ -123,9 +122,9 @@ namespace PasswordGeneratorApp
             passWord = String.Concat(passWord.Where(c => !Char.IsWhiteSpace(c)));
             string result2 = String.Empty;
 
-            BigLittersDependencies bld = new();
-            SmallLittersDependencies sld = new();
-            NumbersDependencies nd = new();
+            BigLittersReplacements bld = new();
+            SmallLittersReplacements sld = new();
+            NumbersReplacements nd = new();
 
             foreach (char symbol in passWord)
             {
