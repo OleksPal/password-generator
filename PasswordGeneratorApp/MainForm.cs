@@ -74,7 +74,7 @@ namespace PasswordGeneratorApp
         }
 
         private void PasswordSizeTrackBarEnter(object sender, EventArgs e) => StealFocus();
-
+            
         private void CopyNonMemorableButtonClick(object sender, EventArgs e)
         {
             Clipboard.SetText(nonMemorableTextBox.Text);
