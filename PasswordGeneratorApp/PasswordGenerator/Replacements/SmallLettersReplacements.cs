@@ -1,6 +1,6 @@
 ﻿namespace PasswordGeneratorApp
 {
-    class SmallLittersReplacements : Replacement
+    class SmallLettersReplacements : Replacement
     {
         public override string[][] Replacements
         {
