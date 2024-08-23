@@ -9,9 +9,9 @@ namespace PasswordGeneratorApp
 {
     public partial class MainForm : MaterialForm
     {
-        private readonly PasswordGenerator passwordGenerator;
+        private readonly IPasswordGeneratable passwordGenerator;
 
-        public MainForm()
+        public MainForm(IPasswordGeneratable _passwordGenerator)
         {
             InitializeComponent();
 
@@ -21,8 +21,7 @@ namespace PasswordGeneratorApp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800,
                 Primary.Blue900, Primary.Blue400, Accent.Amber400, TextShade.WHITE);
 
-            passwordGenerator = new PasswordGenerator();
-
+            passwordGenerator = _passwordGenerator;
             nonMemorableTextBox.Text = passwordGenerator.GenerateNonMemorablePassword(8);
         }
 

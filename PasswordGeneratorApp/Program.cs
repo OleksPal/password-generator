@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
+using Microsoft.Extensions.DependencyInjection;
+using PasswordGeneratorApp.Generator;
 
 namespace PasswordGeneratorApp
 {
@@ -14,10 +17,18 @@ namespace PasswordGeneratorApp
         [STAThread]
         static void Main()
         {
+            var services = new ServiceCollection()
+                .AddSingleton<IPasswordGeneratable, PasswordGenerator>()
+                .AddSingleton<MainForm>();
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            using var serviceProvider = services.BuildServiceProvider();
+            MainForm mainForm = serviceProvider.GetService<MainForm>();
+            
+            Application.Run(mainForm);
         }
     }
 }
