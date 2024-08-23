@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PasswordGeneratorApp.Generator
 {
-    public class PasswordGenerator
+    public class PasswordGenerator : IPasswordGeneratable
     {
         private readonly Random random;
 
@@ -42,7 +42,7 @@ namespace PasswordGeneratorApp.Generator
             return String.Empty;
         }
 
-        public string GetMemorablePassword(string userKeywords)
+        public string GenerateMemorablePassword(string userKeywords)
         {
             string passWord = userKeywords;
             passWord = String.Concat(passWord.Where(c => !Char.IsWhiteSpace(c)));

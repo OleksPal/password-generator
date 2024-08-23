@@ -55,7 +55,7 @@ namespace PasswordGeneratorApp
 
         private void GenerateMemorablePasswordButtonClick(object sender, EventArgs e)
         {
-            memorablePasswordTextBox.Text = passwordGenerator.GetMemorablePassword(userKeywordsTextBox.Text);
+            memorablePasswordTextBox.Text = passwordGenerator.GenerateMemorablePassword(userKeywordsTextBox.Text);
         }
 
         private void CopyMemorablePasswordButtonClick(object sender, EventArgs e)
