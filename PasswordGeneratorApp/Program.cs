@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MaterialSkin.Controls;
 using Microsoft.Extensions.DependencyInjection;
 using PasswordGeneratorApp.Generator;
+using System;
+using System.Windows.Forms;
 
 namespace PasswordGeneratorApp
 {

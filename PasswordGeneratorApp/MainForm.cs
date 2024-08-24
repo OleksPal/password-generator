@@ -29,20 +29,30 @@ namespace PasswordGeneratorApp
 
         private void RefreshButtonClick(object sender, EventArgs e)
         {
-            if (allowNumbersCheckBox.Checked)
-                passwordGenerator.Vocabulary += Constants.Numbers;
-            if (allowSpecialSymbolsCheckBox.Checked)
-                passwordGenerator.Vocabulary += Constants.SpecialSymbols;
+            SetVocabulary();
 
             nonMemorableTextBox.Text = passwordGenerator.GenerateNonMemorablePassword(passwordSizeTrackBar.Value);
         }
 
         private void PasswordSizeTrackBarScroll(object sender, EventArgs e)
         {
-            passwordLengthLabel.Text = "Password Length: " + passwordSizeTrackBar.Value;
+            SetVocabulary();
+
+            passwordLengthLabel.Text = $"Password Length: {passwordSizeTrackBar.Value}";
             nonMemorableTextBox.Text = passwordGenerator.GenerateNonMemorablePassword(passwordSizeTrackBar.Value);
 
             StealFocus();
+        }
+
+        private void SetVocabulary()
+        {
+            passwordGenerator.Vocabulary = Constants.Letters;
+
+            if (allowNumbersCheckBox.Checked)
+                passwordGenerator.Vocabulary += Constants.Numbers;
+
+            if (allowSpecialSymbolsCheckBox.Checked)
+                passwordGenerator.Vocabulary += Constants.SpecialSymbols;
         }
 
         private void PasswordSizeTrackBarEnter(object sender, EventArgs e) => StealFocus();
