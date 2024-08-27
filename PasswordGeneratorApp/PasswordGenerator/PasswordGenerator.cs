@@ -1,5 +1,6 @@
 ﻿using PasswordGeneratorApp.Const;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PasswordGeneratorApp.Generator
@@ -20,22 +21,25 @@ namespace PasswordGeneratorApp.Generator
         {
             var password = String.Empty;
 
-            //var symbolType = new string[3] { "Letters", "Numbers", "SpecialSymbols" };
-            //int optionNumber = 0;
-            //if(Vocabulary.n)
+            List<string> symbolTypes = new List<string>() { "Letters" };
+
+            if (Vocabulary.Any(char.IsDigit))
+                symbolTypes.Add("Numbers");
+            else if (Vocabulary.Any(char.IsPunctuation))
+                symbolTypes.Add("SpecialSymbols");
 
             for (int i = 0; i < passwordSize; i++)
             {
-                int symbolTypeChoice = random.Next(3);
-                switch (symbolTypeChoice)
+                var nextSymbolType = symbolTypes[random.Next(symbolTypes.Count)];
+                switch (nextSymbolType)
                 {
-                    case 0:
+                    case "Letters":
                         password += Constants.Letters[random.Next(Constants.Letters.Count())];
                         break;
-                    case 1:
+                    case "Numbers":
                         password += Constants.Numbers[random.Next(Constants.Numbers.Count())];
                         break;
-                    case 2:
+                    case "SpecialSymbols":
                         password += Constants.SpecialSymbols[random.Next(Constants.SpecialSymbols.Count())];
                         break;
                 }
