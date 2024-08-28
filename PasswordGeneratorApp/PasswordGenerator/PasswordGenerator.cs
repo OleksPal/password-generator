@@ -25,7 +25,7 @@ namespace PasswordGeneratorApp.Generator
 
             if (Vocabulary.Any(char.IsDigit))
                 symbolTypes.Add("Numbers");
-            else if (Vocabulary.Any(char.IsPunctuation))
+            if (Vocabulary.Any(ch => !char.IsLetterOrDigit(ch)))
                 symbolTypes.Add("SpecialSymbols");
 
             for (int i = 0; i < passwordSize; i++)
@@ -34,13 +34,13 @@ namespace PasswordGeneratorApp.Generator
                 switch (nextSymbolType)
                 {
                     case "Letters":
-                        password += Constants.Letters[random.Next(Constants.Letters.Count())];
+                        password += Constants.Letters[random.Next(Constants.Letters.Length)];
                         break;
                     case "Numbers":
-                        password += Constants.Numbers[random.Next(Constants.Numbers.Count())];
+                        password += Constants.Numbers[random.Next(Constants.Numbers.Length)];
                         break;
                     case "SpecialSymbols":
-                        password += Constants.SpecialSymbols[random.Next(Constants.SpecialSymbols.Count())];
+                        password += Constants.SpecialSymbols[random.Next(Constants.SpecialSymbols.Length)];
                         break;
                 }
             }
@@ -48,16 +48,16 @@ namespace PasswordGeneratorApp.Generator
             return password;
         }
 
-        private string MakeCharacterReplacement(Replacement replacement, char nextRandSymbol)
+        private string MakeCharacterReplacement(Replacement replacement, char symbol)
         {
-            for (int j = 0; j < replacement.Replacements.Length; j++)
+            for (int i = 0; i < replacement.Replacements.Length; i++)
             {
-                if (nextRandSymbol.ToString() == replacement.Replacements[j][0])
+                if (symbol.ToString() == replacement.Replacements[i].First())
                 {
-                    if (replacement.Replacements[j].Length == 1)
-                        return replacement.Replacements[j][0];
+                    if (replacement.Replacements[i].Length == 1)
+                        return replacement.Replacements[i].First();
                     else
-                    return replacement.Replacements[j][random.Next(0, replacement.Replacements[j].Length)];
+                        return replacement.Replacements[i][random.Next(replacement.Replacements[i].Length)];
                 }
             }
 
@@ -66,27 +66,26 @@ namespace PasswordGeneratorApp.Generator
 
         public string GenerateMemorablePassword(string userKeywords)
         {
-            string passWord = userKeywords;
-            passWord = String.Concat(passWord.Where(c => !Char.IsWhiteSpace(c)));
-            string result2 = String.Empty;
+            userKeywords = String.Concat(userKeywords.Where(c => !Char.IsWhiteSpace(c)));
+            string password = String.Empty;
 
             BigLettersReplacements bld = new();
             SmallLettersReplacements sld = new();
             NumbersReplacements nd = new();
 
-            foreach (char symbol in passWord)
+            foreach (char symbol in userKeywords)
             {
                 if (char.IsLower(symbol))
-                    result2 += MakeCharacterReplacement(sld, symbol);
+                    password += MakeCharacterReplacement(sld, symbol);
                 else if (char.IsUpper(symbol))
-                    result2 += MakeCharacterReplacement(bld, symbol);
+                    password += MakeCharacterReplacement(bld, symbol);
                 else if (char.IsDigit(symbol))
-                    result2 += MakeCharacterReplacement(nd, symbol);
+                    password += MakeCharacterReplacement(nd, symbol);
                 else
-                    result2 += symbol;
+                    password += symbol;
             }
 
-            return result2;
+            return password;
         }
     }
 }
