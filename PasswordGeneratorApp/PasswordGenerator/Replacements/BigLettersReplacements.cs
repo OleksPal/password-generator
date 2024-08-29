@@ -10,32 +10,32 @@ namespace PasswordGeneratorApp
             {
                 var _replacements = new Dictionary<string, List<string>>();
 
-                _replacements.TryAdd(@"A", new List<string> { @"/-\", @"/=\", @"/~\" });
-                _replacements.TryAdd(@"B", new List<string> { @"|3" });
+                _replacements.TryAdd(@"A", [@"/-\", @"/=\", @"/~\", @"/-|", @"/=|", @"/~|", @"|-\", @"|=\", @"|~\"]);
+                _replacements.TryAdd(@"B", [@"|3", @"!3"]);
                 _replacements.TryAdd(@"C", null);
-                _replacements.TryAdd(@"D", new List<string> { @"|)", @"|]", @"|}", @"!)", @"!]", @"!}" });
+                _replacements.TryAdd(@"D", [@"|)", @"|]", @"|}", @"!)", @"!]", @"!}"]);
                 _replacements.TryAdd(@"E", null);
                 _replacements.TryAdd(@"F", null);
-                _replacements.TryAdd(@"G", new List<string> { @"6" });
-                _replacements.TryAdd(@"H", new List<string> { @"|-|", @"|=|", @"!-!", @"!=!", @"!-|", @"|=!" });
-                _replacements.TryAdd(@"I", new List<string> { @"1", @"|" });
-                _replacements.TryAdd(@"J", new List<string> { @"_|", @"_]", @"_)", @"]", @"_}" });
-                _replacements.TryAdd(@"K", new List<string> { @"|<" });
-                _replacements.TryAdd(@"L", new List<string> { @"|_", @"(_", @"[_", @"{_" });
-                _replacements.TryAdd(@"M", new List<string> { @"|\/|", @"[\/]", @"{\/}", @"(\/|", @"!\/}" });
-                _replacements.TryAdd(@"N", new List<string> { @"|\|", @"!\|", @"|\!" });
-                _replacements.TryAdd(@"O", new List<string> { @"0" });
-                _replacements.TryAdd(@"P", new List<string> { @"|^", @"|*" });
-                _replacements.TryAdd(@"Q", new List<string> { @"O,", @"0," });
+                _replacements.TryAdd(@"G", [@"6"]);
+                _replacements.TryAdd(@"H", [@"|-|", @"|=|", @"!-!", @"!=!", @"!-|", @"|=!"]);
+                _replacements.TryAdd(@"I", [@"1", @"|"]);
+                _replacements.TryAdd(@"J", [@"_|", @"_]", @"_)", @"]", @"_}"]);
+                _replacements.TryAdd(@"K", [@"|<"]);
+                _replacements.TryAdd(@"L", [@"|_", @"(_", @"[_", @"{_"]);
+                _replacements.TryAdd(@"M", [@"|\/|", @"[\/]", @"{\/}", @"(\/)", @"(\/|", @"|\/)"]);
+                _replacements.TryAdd(@"N", [@"|\|", @"!\|", @"|\!", @"!\!"]);
+                _replacements.TryAdd(@"O", [@"0"]);
+                _replacements.TryAdd(@"P", [@"|^", @"|*"]);
+                _replacements.TryAdd(@"Q", [@"O,", @"0,"]);
                 _replacements.TryAdd(@"R", null);
-                _replacements.TryAdd(@"S", new List<string> { @"5" });
+                _replacements.TryAdd(@"S", [@"5"]);
                 _replacements.TryAdd(@"T", null);
                 _replacements.TryAdd(@"U", null);
-                _replacements.TryAdd(@"V", new List<string> { @"\/" });
-                _replacements.TryAdd(@"W", new List<string> { @"\/\/" });
+                _replacements.TryAdd(@"V", [@"\/"]);
+                _replacements.TryAdd(@"W", [@"\/\/", @"\/v", @"v\/"]);
                 _replacements.TryAdd(@"X", null);
                 _replacements.TryAdd(@"Y", null);
-                _replacements.TryAdd(@"Z", null);
+                _replacements.TryAdd(@"Z", [@"2"]);
 
                 return _replacements;
             }
