@@ -1,7 +1,9 @@
-﻿namespace PasswordGeneratorApp
+﻿using System.Collections.Generic;
+
+namespace PasswordGeneratorApp
 {
     public abstract class Replacement
     {
-        public abstract string[][] Replacements { get; }
+        public abstract Dictionary<string, List<string>> Replacements { get; }
     }
 }

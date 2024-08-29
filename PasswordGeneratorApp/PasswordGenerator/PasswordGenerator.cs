@@ -50,30 +50,27 @@ namespace PasswordGeneratorApp.Generator
 
         private string MakeCharacterReplacement(Replacement replacement, char symbol)
         {
-            for (int i = 0; i < replacement.Replacements.Length; i++)
-            {
-                if (symbol.ToString() == replacement.Replacements[i].First())
-                {
-                    if (replacement.Replacements[i].Length == 1)
-                        return replacement.Replacements[i].First();
-                    else
-                        return replacement.Replacements[i][random.Next(replacement.Replacements[i].Length)];
-                }
-            }
+            var stringSymbol = symbol.ToString();
 
-            return String.Empty;
+            replacement.Replacements.TryGetValue(stringSymbol, out List<string> replacementOptions);
+            if (replacementOptions is null)
+                replacementOptions = new List<string> { stringSymbol };
+            else
+                replacementOptions.Add(stringSymbol);
+
+            return replacementOptions[random.Next(replacementOptions.Count)];            
         }
 
         public string GenerateMemorablePassword(string userKeywords)
         {
-            userKeywords = String.Concat(userKeywords.Where(c => !Char.IsWhiteSpace(c)));
+            userKeywords = String.Concat(userKeywords.Where(c => !char.IsWhiteSpace(c)));
             string password = String.Empty;
 
             BigLettersReplacements bld = new();
             SmallLettersReplacements sld = new();
             NumbersReplacements nd = new();
 
-            foreach (char symbol in userKeywords)
+            foreach (var symbol in userKeywords)
             {
                 if (char.IsLower(symbol))
                     password += MakeCharacterReplacement(sld, symbol);
