@@ -63,21 +63,24 @@ namespace PasswordGeneratorApp.Generator
 
         public string GenerateMemorablePassword(string userKeywords)
         {
+            if (userKeywords is null)
+                return String.Empty;
+
             userKeywords = String.Concat(userKeywords.Where(c => !char.IsWhiteSpace(c)));
             string password = String.Empty;
 
-            BigLettersReplacements bld = new();
-            SmallLettersReplacements sld = new();
-            NumbersReplacements nd = new();
+            BigLettersReplacements bigLettersReplacements = new();
+            SmallLettersReplacements smallLettersReplacements = new();
+            NumbersReplacements numbersReplacements = new();
 
             foreach (var symbol in userKeywords)
             {
-                if (char.IsLower(symbol))
-                    password += MakeCharacterReplacement(sld, symbol);
-                else if (char.IsUpper(symbol))
-                    password += MakeCharacterReplacement(bld, symbol);
-                else if (char.IsDigit(symbol))
-                    password += MakeCharacterReplacement(nd, symbol);
+                if (Char.IsLower(symbol))
+                    password += MakeCharacterReplacement(smallLettersReplacements, symbol);
+                else if (Char.IsUpper(symbol))
+                    password += MakeCharacterReplacement(bigLettersReplacements, symbol);
+                else if (Char.IsDigit(symbol))
+                    password += MakeCharacterReplacement(numbersReplacements, symbol);
                 else
                     password += symbol;
             }

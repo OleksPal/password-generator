@@ -13,13 +13,13 @@ namespace PasswordGeneratorApp.UnitTests
             passwordGenerator = Helper.GetServiceProvider<IPasswordGeneratable>();
         }
 
-        #region GenerateNonMemorablePassword method
         [Fact]
         public void DefaultVocabularyEqualsLetters()
         {
             Assert.Equal(Constants.Letters, passwordGenerator.Vocabulary);
         }
 
+        #region GenerateNonMemorablePassword method
         [Fact]
         public void GenerateNonMemorablePasswordWithNegativeLength()
         {
@@ -78,6 +78,38 @@ namespace PasswordGeneratorApp.UnitTests
             bool isContainsSpecialSymbols = password.Any(symbol => Constants.SpecialSymbols.Contains(symbol));
 
             Assert.True(isContainsNumbers && isContainsSpecialSymbols);
+        }
+        #endregion
+
+        #region GenerateMemorablePassword method
+        [Fact]
+        public void GenerateMemorablePasswordWithNullKeyword()
+        {
+            string keywords = null;
+
+            string password = passwordGenerator.GenerateMemorablePassword(keywords);
+
+            Assert.Empty(password);
+        }
+
+        [Fact]
+        public void GenerateMemorablePasswordWithEmptyStringKeyword()
+        {
+            var keywords = String.Empty;
+
+            string password = passwordGenerator.GenerateMemorablePassword(keywords);
+
+            Assert.Empty(password);
+        }
+
+        [Fact]
+        public void GenerateMemorablePasswordWithValidKeywords()
+        {
+            var keywords = "String Empty";
+
+            string password = passwordGenerator.GenerateMemorablePassword(keywords);
+
+            Assert.NotEmpty(password);
         }
         #endregion
     }
