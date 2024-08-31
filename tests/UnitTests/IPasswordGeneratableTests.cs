@@ -14,14 +14,14 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void DefaultVocabularyEqualsLetters()
+        public void Vocabulary_Default_EqualsLetters()
         {
             Assert.Equal(Constants.Letters, passwordGenerator.Vocabulary);
         }
 
         #region GenerateNonMemorablePassword method
         [Fact]
-        public void GenerateNonMemorablePasswordWithNegativeLength()
+        public void GenerateNonMemorablePassword_NegativeLength_ReturnsEmpty()
         {
             string password = passwordGenerator.GenerateNonMemorablePassword(-5);
 
@@ -29,7 +29,7 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void GenerateNonMemorablePasswordWithZeroLength()
+        public void GenerateNonMemorablePassword_ZeroLength_ReturnsEmpty()
         {
             string password = passwordGenerator.GenerateNonMemorablePassword(0);
 
@@ -37,7 +37,7 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void GenerateNonMemorablePasswordWithPositiveLength()
+        public void GenerateNonMemorablePassword_PositiveLength_ReturnsNotNull()
         {
             string password = passwordGenerator.GenerateNonMemorablePassword(10);
 
@@ -45,7 +45,7 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void GenerateNonMemorablePasswordWithNumbers()
+        public void GenerateNonMemorablePassword_AllowNumbers_ReturnsStringWithNumbers()
         {
             passwordGenerator.Vocabulary += Constants.Numbers;
 
@@ -56,7 +56,7 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void GenerateNonMemorablePasswordWithSpecialSymbols()
+        public void GenerateNonMemorablePassword_AllowSpecialSymbols_ReturnsStringWithSpecialSymbols()
         {
             passwordGenerator.Vocabulary += Constants.SpecialSymbols;
 
@@ -67,7 +67,7 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void GenerateNonMemorablePasswordWithNumbersAndSpecialSymbols()
+        public void GenerateNonMemorablePassword_AllowNumbersAndSpecialSymbols_ReturnsStringWithAllKindOfSymbols()
         {
             passwordGenerator.Vocabulary += Constants.Numbers;
             passwordGenerator.Vocabulary += Constants.SpecialSymbols;
@@ -83,7 +83,7 @@ namespace PasswordGeneratorApp.UnitTests
 
         #region GenerateMemorablePassword method
         [Fact]
-        public void GenerateMemorablePasswordWithNullKeyword()
+        public void GenerateMemorablePassword_Null_ReturnsEmpty()
         {
             string keywords = null;
 
@@ -93,7 +93,7 @@ namespace PasswordGeneratorApp.UnitTests
         }
 
         [Fact]
-        public void GenerateMemorablePasswordWithEmptyStringKeyword()
+        public void GenerateMemorablePassword_EmptyString_ReturnsEmpty()
         {
             var keywords = String.Empty;
 
@@ -102,11 +102,13 @@ namespace PasswordGeneratorApp.UnitTests
             Assert.Empty(password);
         }
 
-        [Fact]
-        public void GenerateMemorablePasswordWithValidKeywords()
+        [Theory]
+        [InlineData("a")]
+        [InlineData("1")]
+        [InlineData("/")]
+        [InlineData("Some Keywords")]
+        public void GenerateMemorablePassword_SomeValidString_ReturnsNotEmpty(string keywords)
         {
-            var keywords = "String Empty";
-
             string password = passwordGenerator.GenerateMemorablePassword(keywords);
 
             Assert.NotEmpty(password);
